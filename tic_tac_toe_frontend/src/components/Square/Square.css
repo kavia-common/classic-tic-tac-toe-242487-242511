@@ -1,0 +1,58 @@
+.ttt-square {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(249, 250, 251, 0.9));
+  border-radius: 14px;
+  padding: 0;
+  width: var(--square-size);
+  height: var(--square-size);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.ttt-square:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(55, 65, 81, 0.35);
+}
+
+.ttt-square:active {
+  transform: translateY(0px);
+}
+
+.ttt-square:disabled {
+  cursor: not-allowed;
+  opacity: 0.92;
+}
+
+.ttt-square__value {
+  font-family: var(--font-retro);
+  font-weight: 800;
+  font-size: clamp(32px, 5.4vw, 54px);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--text);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.ttt-square--filled {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(243, 244, 246, 0.95));
+}
+
+.ttt-square--winning {
+  border-color: rgba(22, 163, 74, 0.8);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.25), var(--shadow-md);
+  background: linear-gradient(
+    180deg,
+    rgba(22, 163, 74, 0.12),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+
+.ttt-square:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(55, 65, 81, 0.25), var(--shadow-md);
+}

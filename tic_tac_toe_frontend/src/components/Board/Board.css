@@ -1,0 +1,18 @@
+.ttt-board {
+  --gap: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(3, var(--square-size));
+  grid-template-rows: repeat(3, var(--square-size));
+  gap: var(--gap);
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(55, 65, 81, 0.06), rgba(255, 255, 255, 0.72));
+  border: 1px solid rgba(156, 163, 175, 0.45);
+  box-shadow: var(--shadow-md);
+}
+
+.ttt-board__cell {
+  display: grid;
+  place-items: center;
+}

@@ -1,0 +1,11 @@
+.ttt-game {
+  width: 100%;
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.ttt-game__stage {
+  display: grid;
+  place-items: center;
+}
